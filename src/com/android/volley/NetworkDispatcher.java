@@ -32,6 +32,10 @@ import java.util.concurrent.BlockingQueue;
  * errors are posted back to the caller via a {@link ResponseDelivery}.
  */
 public class NetworkDispatcher extends Thread {
+	/**
+	 * 1.BlockingQueue 与 ThreadPoolExecutor
+	 * 2.使用Java的BlockingQueue实现生产者-消费者http://tonl.iteye.com/blog/1936391
+	 */
 	/** The queue of requests to service. */
 	private final BlockingQueue<Request<?>> mQueue;
 	/** The network interface for processing requests. */
